@@ -21,8 +21,7 @@
     ]
   },
   "repository": {
-    "type": "git",
-    "url": "http://pwx-devops.pw.utc.com/devops/gitlab/microdx/ui-enrollment.git"
+    "type": "git"
   },
   "keywords": [],
   "author": "",
