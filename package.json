@@ -13,14 +13,10 @@
     "css-minify": "cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap.min.css dist/css/bootstrap.css && cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap-grid.min.css dist/css/bootstrap-grid.css && cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap-reboot.min.css dist/css/bootstrap-reboot.css"
   },
   "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not op_mini all",
-    "IE 11"
+    "since 2018"
   ],
   "babel": {
     "presets": [
-      "@babel/preset-react",
       "@babel/preset-env"
     ]
   },
