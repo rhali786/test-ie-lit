@@ -1,0 +1,58 @@
+{
+  "name": "ui-login",
+  "version": "1.0.0",
+  "description": "code, wiki etc.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node ./tasks/dev.js",
+    "build": "node ./tasks/build.js",
+    "test": "riteway ./*.test.js",
+    "scss": "node-sass  --watch lib/scss -o lib/css",
+    "bootstrap": "npm-run-all css-compile css-prefix",
+    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 /lib/bootstrap/scss/bootstrap.scss dist/css/bootstrap.css && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 /lib/bootstrap/scss/bootstrap-grid.scss dist/css/bootstrap-grid.css && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 /lib/bootstrap/scss/bootstrap-reboot.scss dist/css/bootstrap-reboot.css && npm run css-copy",
+    "css-minify": "cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap.min.css dist/css/bootstrap.css && cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap-grid.min.css dist/css/bootstrap-grid.css && cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap-reboot.min.css dist/css/bootstrap-reboot.css"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all",
+    "IE 11"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-env"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://pwx-devops.pw.utc.com/devops/gitlab/microdx/ui-enrollment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/preset-env": "^7.5.5",
+    "debug": "^4.1.1",
+    "lit-element": "^2.1.0",
+    "node-sass": "^4.12.0",
+    "parcel-bundler": "^1.12.3",
+    "riteway": "^6.0.3",
+    "tap-difflet": "^0.7.1",
+    "tape": "^4.10.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "@webcomponents/webcomponentsjs": "^2.2.10",
+    "browser-sync": "^2.26.5",
+    "core-js": "^3.1.4",
+    "fs-extra": "^8.0.1",
+    "inherits": "^2.0.4",
+    "regenerator-runtime": "^0.13.3",
+    "router5": "^7.0.2",
+    "router5-plugin-browser": "^7.0.2",
+    "scss": "^0.2.4"
+  }
+}

@@ -1,0 +1,524 @@
+/* Background */
+body {
+  margin: 0px;
+}
+
+.pwx-background {
+  min-height: 100vh;	
+  width: 100%;	
+  background-color: #F7F7F7;
+  background-image: url(../images/background.threelines.PNG);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: cover;   
+}
+/* logo */
+.pwx-logo {
+  margin-left: 15px;
+  height: 82px;	/* PW style guide*/
+  width: 80px;	
+  background-color: #141B2C;
+}
+/* Navbar */
+.pwx-navbar {
+  position: relative;
+  height: 82px;	
+  width: 100%;	
+  background-color: #141B2C;
+}
+/* SignIn */
+.pwx-signinbox {
+  margin-left: 16px;
+  margin-top: 50px; 
+  width: 320px;	
+  background-color: #FFFFFF;
+  padding-bottom: 32px;
+}
+.pwx-signinbox2 {
+  margin: 1px 0 0 16px;
+  padding: 16px;
+  border-top-color: #5b6376;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  width: 320px;	
+  background-color: #FFFFFF;
+  font-size: 12px;
+}
+.pwx-signinbox_title {
+  padding-top: 32px;
+  padding-left: 16px;
+  color: #000000;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 32px;
+}
+.pwx-signingbox_email_label {
+  /* margin-top:118px; */
+  padding-left: 16px;
+  height: 18px;
+  width: 26px;
+  color: #5b6376;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 10pt;
+  line-height: 18px;
+  margin-bottom: 0px;
+}
+.pwx-signingbox_email_input {
+  border: none; 
+  margin-left: 24px;
+  /* float: left; */
+  height: 18px;
+  width: 272px;
+  color: #a5a9b4;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.pwx-signingbox_email_input:focus, .pwx-signingbox_password_input:focus{
+  outline: none;
+}
+
+.pwx-line_for_input {
+  margin: 0 1rem;
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  width: 270px;
+  padding-left: 16px;
+
+}
+.pwx-line_for_input2 {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-left: 16px;
+  width: 9
+}
+.pwx-signingbox_password_label {
+  /* margin-top: 186px; */
+  padding-left: 16px;
+  padding-top: 24px;
+  color: #5b6376;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 10pt;
+  margin-bottom: 0px;
+}
+.pwx-signingbox_password_input {
+  border: none; 
+  margin-left: 24px;
+  /* float: left; */
+  height: 18px;
+  width: 272px;
+  color: #a5a9b4;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+.pwx-signinbox_checkbox {
+  margin: 0;
+  height: 16px;
+  width: 16px;
+  border: 2px solid #A5A9B4;
+}
+
+.pwx-signinbox_remember_me_container{
+  display: flex;
+  align-items: center;
+  padding: 24px 0 0 16px;
+}
+
+.pwx-signinbox_remember_me {
+  /* margin-top: 250px; */
+  color: #5b6376;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+  margin: 0;
+  padding-left: 8px;
+}
+.pwx-signinbox_signin_button {
+    margin: 32px 16px 16px;
+    border: none;
+    border-radius:1px; 
+    height: 32px;	
+    width: calc(100% - 32px);
+    background-color: #3E485E;
+    font-family: 'Barlow Semi Condensed';
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+}
+.pwx-signinbox_signin_button_text {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+.pwx-signinbox_links_container{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 16px;
+}
+
+.pwx-signinbox_links {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+    height: 18px;
+    color: #2d6bff;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.pwx-signinbox2_paragraph{
+  margin: 0;
+}
+
+.pwx-signinbox_textalign_right{
+    float: right;
+}
+.pwx-signinbox_textalign_left{
+    float: left;
+}
+/* Forgot Password Box  */
+.pwx-forgotpasswordmodal_box {
+  display: none; /* default - hidden */
+  position: fixed;
+  z-index: 1; 
+  margin-top: 160px;
+  margin-left: 400px;
+  left: 10%;
+  top: 0;
+  width: 35%;
+  height: 50%;
+  overflow: auto; 
+  background-color:#F7F7F7; /* modal background color*/
+  background-blend-mode: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.pwx-forgotpasswordmodal_box_title {
+  padding-left: 20px ;
+  padding-top: 5%;
+  font-family: "Barlow Semi Condensed";	
+  font-size: 30px;
+  text-align: left;	
+  letter-spacing: 0.25px;
+  color: rgb(11, 12, 12);
+}
+.pwx-forgotpasswordmodal_box_p {
+  font-family: "Barlow Semi Condensed";
+  padding-left: 15px;	
+  font-size: 14px;	
+  color: rgb(11, 12, 12);
+}
+.pwx-forgotpasswordmodal_box_email_label {
+  /* padding-top:40%; */
+  padding-left: 15px;
+  color: #5b6376;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 10pt;
+  line-height: 18px;
+}
+.pwx-forgotpasswordmodal_box_email_input {
+  border: none; 
+  margin-top: 5px;
+  margin-left: 24px;
+  float: left;
+  height: 18px;
+  width: 272px;
+  background-color: rgba(0,0,0,0.001);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+.pwx-forgotpasswordmodal_box_email_hr {
+  border: rgba(0,0,0,0,);
+  margin-top: 30px;
+  margin-left:24px;
+}
+.pwx-forgotpasswordmodal_btn {
+  border: none;
+  float: right;
+  margin-right:15px;
+  margin-top: 5%;
+  border-radius:1px; 
+  height: 32px;	
+  width: 150px;	
+  border-radius:4px;
+  background-color: rgb(107, 110, 118);
+  font-family: 'Barlow Semi Condensed';
+  font-size: 15px;
+  color: #FFFFFF;
+  line-height: 18px;
+  text-align: center;
+}
+.pwx-newpassword_btn_container{
+  margin: 16px;
+}
+
+.pwx-newpassword_btn {
+  border: none;
+  padding: 8px;
+  width: 100%;
+  border-radius:4px;
+  background-color: #3E485E;
+  font-family: 'Barlow Semi Condensed';
+  font-size: 15px;
+  color: #FFFFFF;
+  line-height: 18px;
+  text-align: center;
+}
+.pwx-newpassword_box {
+  margin-left: 15px;
+  margin-top: 50px; 
+  width: 320px;	
+  background-color: #FFFFFF;
+}
+/* Reset Password Modal*/
+.pwx-resetpassword_box_labels {
+  padding-left: 15px;
+  color: #5b6376;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 10pt;
+  line-height: 18px;
+}
+.pwx-resetpassword_box_input {
+  border: none; 
+  margin-left: 24px;
+  float: left;
+  height: 18px;
+  width: 272px;
+  color: #a5a9b4;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+.pwx-resetpasswordmodal_btn {
+  border: none;
+  margin-left: 22%;
+  margin-top: 5%;
+  border-radius:1px; 
+  height: 32px;	
+  width: 150px;	
+  border-radius:4px;
+  background-color: rgb(107, 110, 118);
+  font-family: 'Barlow Semi Condensed';
+  font-size: 15px;
+  color: #FFFFFF;
+  line-height: 18px;
+  text-align: center;
+}
+
+/* SignIn - email or password is wrong*/
+.pwx-signin_error {
+  height: 32px;	
+  width: 1248px;	
+  background-color: #EB1616;
+  color:#FFFFFF
+}
+/* Enrollment Modal elements*/
+.pwx-enrollmentmodal_box {
+  display: none; /* default - hidden */
+  position: fixed;
+  z-index: 1; 
+  margin-top: 160px;
+  margin-left: 400px;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 70%;
+  overflow: auto; 
+  background-color:#F7F7F7; /* modal background color*/
+  background-blend-mode: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.pwx-modal_content_box1 {
+  float:left;
+  height: 100%;	
+  width: 40%;	
+  font-family: 'Barlow Semi Condensed';
+  font-size: 15px;
+  color: black;
+  background-color:rgba(0,0,0,0.3);
+}
+.pwx-modal_content_box2 {
+  float:right;
+  height: 100%;	
+  width: 60%;	
+  font-family: 'Barlow Semi Condensed';
+  font-size: 15px;
+  color: black;
+  background-color:rgba(0,0,0,0.1);
+}
+.pwx-modal_content_box1_h1 {
+  padding-left: 17px ;
+  font-family: "Barlow Semi Condensed";	
+  font-size: 16px;	
+  letter-spacing: 0.25px;
+  color: rgb(11, 12, 12);
+}
+.pwx-modal_content_box1_p {
+  font-family: "Barlow Semi Condensed";	
+  font-size: 12px;	
+  color: rgb(11, 12, 12);
+}
+.pwx-modal_content_center {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.pwx-modal_content_box2_h1 {
+  padding-left: 17px ;
+  font-family: "Barlow Semi Condensed";	
+  font-size: 32px;	
+  letter-spacing: 0.25px;
+  color: rgb(11, 12, 12);
+}
+.pwx-modal_content_box2_email_label {
+  /* margin-top:118px; */
+  padding-left: 16px;
+  color: #5b6376;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 10pt;
+  line-height: 18px;
+}
+.pwx-modal_content_box2_email_input {
+  border: none; 
+  margin-top: 5px;
+  margin-left: 24px;
+  float: left;
+  background-color: rgba(0,0,0,0.001);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+.pwx-modal_content_box2_email_hr {
+  border: rgba(0,0,0,0,);
+  margin-top: 30px;
+  width:272px;
+  margin-left:24px;
+}
+.pwx-modal_content_termsandconditions_box {
+  height: 64px;
+  width: 250px;	
+  color: rgba(0,0,0,0.5);	
+  font-family: Inter;	
+  font-size: 12px;
+}
+.pwx-modal_cancel_btn {
+  margin-left: 15px;
+  margin-top: 65%;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  height: 32px;	
+  width: 45%;	
+  border: 1px solid #3E485E;
+}
+.pwx-modal_submit_btn {
+  height: 32px;	
+  width: 45%;	
+  border: 1px solid #3E485E;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 15px;
+  color: #FFFFFF;
+  background-color: #3E485E;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  padding-left: 96%;
+  position: absolute;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* PWX - Enrollment - (enrollment left box)*/
+.pwx-enrollment_left {
+  height:100%;
+  width:30%;
+  background-color: #FFFFFF;
+}
+.pwx-enrollment_left_title {
+  font-family: 'Barlow Semi Condensed';
+  font-size: 16px;
+  color: white;
+}
+.pwx-enrollment_left_navigation {
+  float:left;
+  height: 100%;	
+  width: 40%;	
+  font-family: 'Barlow Semi Condensed';
+  font-size: 15px;
+}
+.pwx-enrollment_left_navigation_step_box {
+  height: 88px;	
+  width: 264px;	
+  background-color: #E3E5E8;
+}
+.pwx-enrollment_left_navigation_step_box_statuscolor {
+  height: 88px;	
+  width: 4px;	
+  background-color: #A5A9B4;
+}
+.pwx-enrollment_left_navigation_step_box_title {
+  height: 18px;	
+  width: 216px;	
+  color: #5B6376;	
+  font-family: "Barlow Semi Condensed";	
+  font-size: 12px;	
+  letter-spacing: 0.5px;	
+  line-height: 18px;
+}
+.pwx-enrollment_left_navigation_step_box_p {
+  height: 18px;	
+  width: 244px;	
+  color: #000000;	
+  font-family: "Barlow Semi Condensed";	
+  font-size: 12px;	
+  line-height: 18px;
+}
+
+/* PWX - Enrollment - (enrollment right box)*/
+.pwx-enrollment_right {
+  height:100%;
+  width:70%;
+  background-color:#FFFFFF;
+}
+.pwx-enrollment_right_title {
+  height: 38px;	
+  width: 246px;	
+  color: #000000;	
+  font-family: "Barlow Semi Condensed";	
+  font-size: 32px;	
+  line-height: 38px;
+}
+.pwx-enrollment_right_title2 {
+  height: 18px;	
+  width: 150px;	
+  color: #000000;
+  font-family: "Barlow Semi Condensed";	
+  font-size: 12px;	
+  letter-spacing: 0.5px;	
+  line-height: 18px;
+}
+.pwx-enrollment_label {
+  /* margin-top:118px; */
+  padding-left: 16px;
+  height: 18px;
+  width: 26px;
+  color: #5b6376;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 10pt;
+  line-height: 18px;
+}
+.pwx-enrollment_inputbox {
+  height: 18px;	
+  width: 272px;	
+  color: #A5A9B4;	
+  font-family: 'Barlow Semi Condensed';	
+  font-size: 12px;	
+  line-height: 18px;
+}
