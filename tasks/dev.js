@@ -1,3 +1,5 @@
+const transpileForIE = require('./transpile-for-ie');
+
 const Bundler = require("parcel-bundler"),
   Path = require("path"),
   browserSync = require("browser-sync").create(),
@@ -31,7 +33,12 @@ bundler.on("bundled", async () => {
 });
 
 bundler.on("buildEnd", () => {
-  browserSync.reload();
+  // setTimeout is to avoid browserSync throwing an error
+  // after the IE11 transpile is done 
+  setTimeout(function() {
+    transpileForIE("dist");
+    browserSync.reload();
+  },0)
 });
 
 bundler.bundle();
