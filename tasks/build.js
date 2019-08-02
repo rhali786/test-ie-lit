@@ -1,4 +1,6 @@
 process.env.NODE_ENV = 'production';
+const transpileForIE = require('./transpile-for-ie');
+
 
 const Bundler = require("parcel-bundler"),
   Path = require("path"),
@@ -26,5 +28,6 @@ fs.removeSync('dist');
 const bundler = new Bundler(entryFiles, options);
 
 bundler.bundle().then(() => {
+  transpileForIE("dist");
   console.log("done building");
 }, e => console.log(e));
